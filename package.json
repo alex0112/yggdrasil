@@ -1,0 +1,35 @@
+{
+  "name": "yggdrasil",
+  "version": "1.0.0",
+  "description": "Front end to consume data from wiki-yggdrasil ruby gem",
+  "main": "client/src/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "test",
+    "build": "cd client && npm install && npm run build && cd ..",
+    "deploy": "cp -a client/build/. public/",
+    "postinstall": "npm run build && npm run deploy && echo 'Client built!'",
+    "start": "cd client/ && react-scripts start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alex0112/yggdrasil.git"
+  },
+  "keywords": [
+    "spider",
+    "wikipedia",
+    "wiki-yggdrasil",
+    "yggdrasil"
+  ],
+  "author": "Alex Larsen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alex0112/yggdrasil/issues"
+  },
+  "homepage": "https://github.com/alex0112/yggdrasil#readme",
+  "dependencies": {
+    "react-scripts": "^1.1.4"
+  }
+}
