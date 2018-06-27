@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   scope '/api' do
-    ## :resources go here
+    resources :trees, only: [:show]
   end
 end
