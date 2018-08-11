@@ -30,3 +30,6 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+
+# Added at 2018-08-11 16:21:59 -0600 by alex:
+gem "rack-cors", "~> 1.0"
