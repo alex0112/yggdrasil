@@ -12,12 +12,10 @@ export default class SearchBar extends Component {
 	      <label>URI: </label>
 	      <input type="url" name="url" id="url"
 		     placeholder="https://"
-		     pattern="https://.*" size="20" required
+		     pattern="https://.*" required
 		     />
 	    </div>
-
 	);
-
     }
 
 }
