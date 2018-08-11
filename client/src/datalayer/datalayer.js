@@ -1,7 +1,7 @@
-import axios from 'axios'
+import axios from 'axios';
 
 export function getTreeData(uri) {
-    axios.get('/trees/uri')
+    axios.get(`/api/trees/${uri}`)
 	.then(function (response) {
 	    console.log(response);
 	})

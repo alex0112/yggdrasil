@@ -11,8 +11,14 @@ class App extends Component {
     render() {
 	return (
 	    <div>
-	      <SearchBar />
-	      <Yggdrasil />
+	      <div>
+		<SearchBar />
+		<Yggdrasil />
+	      </div>
+
+	      <div>
+		{getTreeData('https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FYggdrasil')}
+	      </div>
 	    </div>
 	);
     }

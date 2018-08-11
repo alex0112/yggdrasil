@@ -15,7 +15,6 @@ const myTreeData = [
     ]
   },
 ];
-console.log(myTreeData);
 
 export default class Yggdrasil extends Component {
     render() {
