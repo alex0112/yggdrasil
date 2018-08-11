@@ -7,6 +7,7 @@ class Tree < ApplicationRecord
                       .new(uri: self.root_uri)
                       .children(depth: 1)
                       .to_json
+    p self.data
   end
 
 end
