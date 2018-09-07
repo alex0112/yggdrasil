@@ -20,7 +20,7 @@ export default class Yggdrasil extends Component {
     render() {
 	return (
 	    <div>
-	      {this.props.data.length == 0 ? 'Loading...' : <Tree data={this.props.data} orientation='vertical' /> }
+	      {this.props.data.length === 0 ? 'Loading...' : <Tree data={this.props.data} orientation='vertical' /> }
 	    </div>
 	    );
     }

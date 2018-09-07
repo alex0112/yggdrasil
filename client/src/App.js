@@ -14,10 +14,10 @@ class App extends Component {
     }
 
     getData = async () => {
- 	const data = await getTreeData('https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FYggdrasil');
+ 	const data = await getTreeData('https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FLinear_regression');
 	const tree = data.data.data; // I cannot make bricks without clay!
 	this.setState({
-	    tree: JSON.parse(tree)
+	    tree: [JSON.parse(tree)]
 	});
     }
     
