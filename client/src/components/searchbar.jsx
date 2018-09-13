@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 
 export default class SearchBar extends Component {
 
-    inputHandler(input) {
-	
-    }
+    state = { input: '' };
 
     render() {
 	return(
@@ -13,7 +11,9 @@ export default class SearchBar extends Component {
 	      <input type="url" name="url" id="url"
 		     placeholder="https://"
 		     pattern="https://.*" required
+		     onChange={ (e) => this.setState({ input: e.target.value}) }
 		     />
+		<input type="submit" onClick={ () => { this.props.clickHandler(this.state.input) }} />
 	    </div>
 	);
     }

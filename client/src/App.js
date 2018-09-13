@@ -8,16 +8,12 @@ import { getTreeData } from './datalayer/datalayer';
 
 class App extends Component {
     state = { tree: [] };
-    
-    componentWillMount = () => {
-	this.getData();
-    }
 
-    getData = async () => {
- 	const data = await getTreeData('https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FLinear_regression');
+    getData = async (uri) => {
+ 	const data = await getTreeData(encodeURIComponent(uri));
 	const tree = data.data.data; // I cannot make bricks without clay!
 	this.setState({
-	    tree: [JSON.parse(tree)]
+	    tree: JSON.parse(tree)
 	});
     }
     
@@ -25,7 +21,7 @@ class App extends Component {
 	return (
 	    <div>
 	      <div>
-		<SearchBar />
+		<SearchBar clickHandler={this.getData}/>
 		<Yggdrasil data={this.state.tree} />
 	      </div>
 	    </div>
