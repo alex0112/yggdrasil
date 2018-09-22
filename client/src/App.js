@@ -19,11 +19,9 @@ class App extends Component {
     
     render() {
 	return (
-	    <div>
-	      <div>
+	    <div id="top">
 		<SearchBar clickHandler={this.getData}/>
 		<Yggdrasil data={this.state.tree} />
-	      </div>
 	    </div>
 	);
     }
