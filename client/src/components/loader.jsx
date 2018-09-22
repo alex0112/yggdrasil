@@ -3,8 +3,8 @@ import React, {Component} from 'react';
 class Loader extends Component {
     render() {
 	return(
-	    <div className="loader">
-	      <div className="loader App-logo">
+	    <div id="spinner" className="notice">
+	      <div className="notice App-logo">
 		/
 	      </div>
 	      Loading...
