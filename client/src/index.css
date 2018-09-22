@@ -11,7 +11,7 @@ body {
 }
 
 #searchbar {
-    margin-left: 35%;
+    margin-left: 31%;
     margin-top: 35px;
 }
 
@@ -57,9 +57,8 @@ height: 100%;
 }
 
 .loader {
-/*    font-family: sans-serrif; */
     font-size: xx-large;
     position: absolute;
-    top: 50%;
+    top: 25%;
     right: 50%;
 }
