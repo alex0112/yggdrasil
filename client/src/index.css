@@ -5,31 +5,37 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: monospace;
   background-image: url('assets/tiny-squares.png');
   height: 100%;
 }
 
 #searchbar {
-    align: center;
+    margin-left: 35%;
+    margin-top: 35px;
 }
 
 .wiki-button {
-    background-color: lightsteelblue;
-    height: 30px;
-    border-left: none;
-    border: none;
+    background-color: #b0c4de61;
+    height: 35px;
     border-radius: 4px;
     font-family: monospace;
     font-size: large;
+}
+:focus {
+    outline-width: medium;
+    outline-color: darkseagreen;
+    outline-style: dotted;
 }
 
 .wiki-input {
     height: 30px;
     width: 50%;
-    background-color: azure;
+    background-color: #f7f96b59;
     box-shadow: 2px 2px ghostwhite;
     border-style: unset;
+    font-size: x-large;
+    font-family: monospace;
 }
 
 #container {
