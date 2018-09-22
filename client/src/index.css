@@ -2,6 +2,29 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-image: url('assets/tiny-squares.png');
+}
+
+#searchbar {
+    align: center;
+}
+
+.wiki-button {
+    background-color: lightsteelblue;
+    height: 30px;
+    border-left: none;
+    border: none;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: large;
+}
+
+.wiki-input {
+    height: 30px;
+    width: 50%;
+    background-color: azure;
+    box-shadow: 2px 2px ghostwhite;
+    border-style: unset;
 }
 
 #container {
@@ -11,8 +34,6 @@ body {
 }
 
 .App {
-//    min-height: 10000000px;
-//  height: 10000000px;
 height: 100%;
 }
 

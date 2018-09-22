@@ -7,13 +7,12 @@ export default class SearchBar extends Component {
     render() {
 	return(
 	    <div id="searchbar">
-	      <label>URI: </label>
-	      <input type="url" name="url" id="url"
+	      <input type="url" className="wiki-input" name="url" id="url"
 		     placeholder="https://"
 		     pattern="https://.*" required
 		     onChange={ (e) => this.setState({ input: e.target.value}) }
 		     />
-		<input type="submit" onClick={ () => { this.props.clickHandler(this.state.input) }} />
+		<input type="submit" className="wiki-button" onClick={ () => { this.props.clickHandler(this.state.input) }} />
 	    </div>
 	);
     }
