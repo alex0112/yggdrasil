@@ -55,3 +55,11 @@ height: 100%;
 #root {
     height: 100%;
 }
+
+.loader {
+/*    font-family: sans-serrif; */
+    font-size: xx-large;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+}
