@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 
 import Tree from 'react-d3-tree';
-import Loader from './loader';
 
 //  <Tree /> expects data in this form:
 // [
