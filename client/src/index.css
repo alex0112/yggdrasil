@@ -22,6 +22,7 @@ body {
     font-family: monospace;
     font-size: large;
 }
+
 :focus {
     outline-width: medium;
     outline-color: darkseagreen;
@@ -56,9 +57,14 @@ height: 100%;
     height: 100%;
 }
 
-.loader {
+.notice {
     font-size: xx-large;
     position: absolute;
+    top: 25%;
+    right: 18%;
+}
+
+#spinner {
     top: 25%;
     right: 50%;
 }
