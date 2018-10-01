@@ -32,7 +32,7 @@ class App extends Component {
 	else {
 	    const tree = data.data.data; // I cannot make bricks without clay!
 	    this.setState({
-		tree: JSON.parse(tree),
+		tree: [JSON.parse(tree)],
 		loading: false
 	    });
 	}
