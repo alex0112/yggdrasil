@@ -30,6 +30,6 @@
   },
   "homepage": "https://github.com/alex0112/yggdrasil#readme",
   "dependencies": {
-    "react-scripts": "^1.1.4"
+    "react-scripts": "^1.1.5"
   }
 }
