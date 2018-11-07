@@ -25,7 +25,14 @@ export default class Yggdrasil extends Component {  // TODO:  Functional compone
 	      {this.props.data.length !== 0 ?
 		  <Tree
 			data={this.props.data}
-			orientation='vertical'
+			orientation="vertical"
+			separation={{siblings: 0.9, nonSiblings: 3}}
+			textLayout={{textAnchor: "start", x: -20, y: 20 , transform: undefined }}
+			onClick={(data, event) => { console.log(data); }}
+			nodeSvgShape={{ shape: 'circle',
+					shapeProps: { r: 4 }
+				      }}
+			translate={{ x: 650, y: 100 }}
 			/>
 		  : "" }
 	    </div>
