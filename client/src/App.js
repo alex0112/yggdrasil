@@ -5,6 +5,7 @@ import Yggdrasil from './components/tree';
 import SearchBar from './components/searchbar';
 import Loader from './components/loader';
 import Error from './components/error';
+import Title from './components/title';
 
 import { getTreeData } from './datalayer/datalayer';
 
@@ -41,7 +42,8 @@ class App extends Component {
     render() {
 	return (
 	    <div id="top">
-		<SearchBar clickHandler={this.getData} />
+	      <Title/>
+	      <SearchBar clickHandler={this.getData} />
 		{ this.state.loading ? <Loader /> : <Yggdrasil data={this.state.tree} /> }
 		{ this.state.error ? <Error message="Hm.  Something seems to have gone wrong.  Please check your URL." /> : "" }
 	    </div>
