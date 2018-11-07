@@ -18,10 +18,22 @@ import Tree from 'react-d3-tree';
 // ];
 
 export default class Yggdrasil extends Component {  // TODO:  Functional component.
+    state = {}
+    
+    componentDidMount() {
+	const dimensions = this.container.getBoundingClientRect();
+	this.setState({
+	    translate: {
+		x: dimensions.width / 2,
+		y: dimensions.height / 10
+	    }
+	});
+    }
 
+    
     render() {
 	return (
-	    <div id='container'>
+	    <div id='container' ref={tc => (this.container = tc)}>
 	      {this.props.data.length !== 0 ?
 		  <Tree
 			data={this.props.data}
@@ -32,7 +44,7 @@ export default class Yggdrasil extends Component {  // TODO:  Functional compone
 			nodeSvgShape={{ shape: 'circle',
 					shapeProps: { r: 4 }
 				      }}
-			translate={{ x: 650, y: 100 }}
+			translate={this.state.translate}
 			/>
 		  : "" }
 	    </div>
