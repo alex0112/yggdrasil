@@ -1,9 +1,9 @@
 # Yggdrasil
 
 
->“Does Yggdrasil drink from it because it is the Well of Wisdom, 
-> or is it the Well of Wisdom because Yggdrasil drinks from it?” 
-> ― J. Aleksandr Wootton
+_“Does Yggdrasil drink from it because it is the Well of Wisdom, 
+ or is it the Well of Wisdom because Yggdrasil drinks from it?” 
+ ― J. Aleksandr Wootton_
 
 
 
