@@ -17,7 +17,7 @@ gem 'puma', '~> 3.7'
 gem "foreman", "~> 0.64.0"
 
 # Added at 2018-06-15 22:43:19 -0600 by alex:
-gem "wiki-yggdrasil", "~> 0.3.1"
+gem "wiki-yggdrasil", "~> 0.3.2"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
