@@ -16,3 +16,6 @@ Introducing Yggdrasil. Named after the tree in Norse mythology that drinks from 
 Yggdrasil takes a Wikipedia URI as an argument, and proceeds to spider out a dependency tree of referenced articles.
 
 You can try the beta out [here](https://wiki-tree.herokuapp.com).  Or consume the data directly by installing [this gem.](https://github.com/alex0112/wiki-yggdrasil)
+
+Shout out to [react-d3-tree](https://github.com/bkrem/react-d3-tree) for making this application possible.
+
