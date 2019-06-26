@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
 import Tree from 'react-d3-tree';
+import Label from './label';
 
 //  <Tree /> expects data in this form:
 // [
@@ -36,10 +37,14 @@ export default class Yggdrasil extends Component {  // TODO:  Functional compone
 	    <div id='container' ref={tc => (this.container = tc)}>
 	      {this.props.data.length !== 0 ?
 		  <Tree
+                allowForeignObjects
+                nodeLabelComponent={{
+                    render: <Label className='' />
+                }}
 			data={this.props.data}
 			orientation="vertical"
 			separation={{siblings: 0.9, nonSiblings: 3}}
-			textLayout={{textAnchor: "start", x: -20, y: 20 , transform: undefined }}
+			//textLayout={{textAnchor: "start", x: -20, y: 20 , transform: undefined }}
 			onClick={(data, event) => { console.log(data); }}
 			nodeSvgShape={{ shape: 'circle',
 					shapeProps: { r: 4 }
