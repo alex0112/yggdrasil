@@ -4,7 +4,7 @@ import Tree from 'react-d3-tree';
 import Label from './label';
 
 //  <Tree /> expects data in this form:
-// [
+
 //   {
 //     name: 'Top Level',
 //     children: [
@@ -15,45 +15,89 @@ import Label from './label';
 //         name: 'Level 2: B'
 //       },
 //     ]
-//   },
-// ];
+//   };
 
-export default class Yggdrasil extends Component {  // TODO:  Functional component.
-    state = {}
-    
-    componentDidMount() {
-	const dimensions = this.container.getBoundingClientRect();
-	this.setState({
-	    translate: {
-		x: dimensions.width / 2,
-		y: dimensions.height / 10
-	    }
-	});
+
+export default class Yggdrasil extends Component {
+
+    constructor(props) {
+        super(props);
+        this.labelHandler = this.handler.bind(this);
+        this.state = {
+            even: { x: 10,  y: 10  },
+            odd:  { x: 100, y: 0   },
+            root: { x: -10, y: -30 },
+            foreignObject: {
+                render: <Label onRender={this.labelHandler} />,
+                foreignObjectWrapper: {
+                    x: 0,
+                    y: 0
+                }
+            }
+        };
     }
 
+    componentDidMount() {
+	    const dimensions = this.container.getBoundingClientRect();
+	    this.setState({
+	        translate: {
+		        x: dimensions.width / 2,
+		        y: dimensions.height / 10
+	        }
+	    });
+    }
+
+    async handler(index) {
+        const positioning = (index === 0 ? this.state.root : index % 2 === 0 ? this.state.even : this.state.odd);
+
+         console.log("________");
+         console.log(positioning);
+         console.log("________");
+
+        const foreignObject =
+               {
+                  render: <Label onRender={this.handler}/>,
+                  foreignObjectWrapper: {
+                      x: positioning.x,
+                      y: positioning.y
+                  }
+              };
+
+         console.log("$$$$$$$");
+         console.log(foreignObject.foreignObjectWrapper);
+         console.log("$$$$$$$");
+
+        // setState batches state changes, they do not happen immediately after
+        // the function call
+        // which is why the state isn't being updated until after the entire tree render.  Giving it only the initial coordinate values for foreignObjects
+        
+        this.setState({
+            foreignObject: foreignObject
+        }, () => { console.log(this.state);});
+
+    }
     
     render() {
-	return (
+        return (
 	    <div id='container' ref={tc => (this.container = tc)}>
 	      {this.props.data.length !== 0 ?
 		  <Tree
                 allowForeignObjects
-                nodeLabelComponent={{
-                    render: <Label className='' />
-                }}
-			data={this.props.data}
-			orientation="vertical"
-			separation={{siblings: 0.9, nonSiblings: 3}}
-			//textLayout={{textAnchor: "start", x: -20, y: 20 , transform: undefined }}
-			onClick={(data, event) => { console.log(data); }}
-			nodeSvgShape={{ shape: 'circle',
+                nodeLabelComponent={this.state.foreignObject}
+			    data={this.props.data}
+			    orientation="vertical"
+		        separation={{siblings: 0.7, nonSiblings: 3}}
+			    //textLayout={{textAnchor: "start", x: -20, y: 20 , transform: undefined }}
+		        onClick={this.clickHandler}
+			    nodeSvgShape={{
+                    shape: 'circle',
 					shapeProps: { r: 4 }
-				      }}
-			translate={this.state.translate}
-			/>
+				}}
+			    translate={this.state.translate}
+			    />
 		  : "" }
 	    </div>
 	    );
     }
-
+    
 }
