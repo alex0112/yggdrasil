@@ -50,10 +50,6 @@ export default class Yggdrasil extends Component {
     async handler(index) {
         const positioning = (index === 0 ? this.state.root : index % 2 === 0 ? this.state.even : this.state.odd);
 
-         console.log("________");
-         console.log(positioning);
-         console.log("________");
-
         const foreignObject =
                {
                   render: <Label onRender={this.handler}/>,
@@ -63,18 +59,13 @@ export default class Yggdrasil extends Component {
                   }
               };
 
-         console.log("$$$$$$$");
-         console.log(foreignObject.foreignObjectWrapper);
-         console.log("$$$$$$$");
-
         // setState batches state changes, they do not happen immediately after
         // the function call
         // which is why the state isn't being updated until after the entire tree render.  Giving it only the initial coordinate values for foreignObjects
         
-        this.setState({
+        await this.setState({
             foreignObject: foreignObject
-        }, () => { console.log(this.state);});
-
+        }, () => { console.log(this.state.foreignObject.foreignObjectWrapper); });
     }
     
     render() {
@@ -87,7 +78,6 @@ export default class Yggdrasil extends Component {
 			    data={this.props.data}
 			    orientation="vertical"
 		        separation={{siblings: 0.7, nonSiblings: 3}}
-			    //textLayout={{textAnchor: "start", x: -20, y: 20 , transform: undefined }}
 		        onClick={this.clickHandler}
 			    nodeSvgShape={{
                     shape: 'circle',
