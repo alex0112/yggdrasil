@@ -48,10 +48,10 @@ export default class Yggdrasil extends Component {
     }
 
     async handler(index) {
-        const positioning = (index === 0 ? this.state.root : index % 2 === 0 ? this.state.even : this.state.odd);
+        const positioning = await (index === 0 ? this.state.root : index % 2 === 0 ? this.state.even : this.state.odd);
 
-        const foreignObject =
-               {
+        const foreignObject = 
+              await {
                   render: <Label onRender={this.handler}/>,
                   foreignObjectWrapper: {
                       x: positioning.x,
