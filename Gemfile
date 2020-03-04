@@ -11,7 +11,7 @@ gem 'rails', '~> 5.1.5'
 gem 'pg'
 
 # Use Puma as the app server
-gem 'puma', '~> 3.7'
+gem 'puma', '~> 3.12'
 
 # Added at 2018-06-13 20:34:06 -0600 by alex:
 gem "foreman", "~> 0.64.0"
