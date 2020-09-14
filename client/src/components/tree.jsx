@@ -61,7 +61,9 @@ export default class Yggdrasil extends Component {
 
         // setState batches state changes, they do not happen immediately after
         // the function call
-        // which is why the state isn't being updated until after the entire tree render.  Giving it only the initial coordinate values for foreignObjects
+        // which is why the state isn't being updated until after the
+	// entire tree renders.  Giving it only the initial coordinate
+	// values for foreignObjects
         
         await this.setState({
             foreignObject: foreignObject
