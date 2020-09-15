@@ -35,3 +35,5 @@ end
 gem "rack-cors", "~> 1.0"
 
 gem "nokogiri", "~> 1.10"
+
+ruby '~> 2.6.3'
