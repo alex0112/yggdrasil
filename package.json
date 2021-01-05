@@ -1,1 +1,36 @@
-client/package.json
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:3000",
+  "engines": {
+    "node": "14.x",
+    "yarn": "1.22.x"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "react": "^16.9.0",
+    "react-bootstrap": "^0.32.4",
+    "react-d3-tree": "^1.11.0",
+    "react-dom": "^16.9.0",
+    "react-scripts": "^3.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
