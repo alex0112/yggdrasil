@@ -8,7 +8,7 @@
     "yarn": "1.22.x"
   },
   "dependencies": {
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "react": "^16.9.0",
     "react-bootstrap": "^0.32.4",
     "react-d3-tree": "^1.11.0",
