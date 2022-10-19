@@ -34,6 +34,6 @@ end
 # Added at 2018-08-11 16:21:59 -0600 by alex:
 gem "rack-cors", "~> 1.0"
 
-gem "nokogiri", "~> 1.10"
+gem "nokogiri", "~> 1.13"
 
 ruby '~> 2.6.3'
